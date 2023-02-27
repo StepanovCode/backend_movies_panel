@@ -1,0 +1,126 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-25 09:55+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: movies/apps.py:8
+msgid "movies_config_movies"
+msgstr "Фильмы"
+
+#: movies/models.py:8 movies/models.py:82 movies/models.py:103
+#: movies/models.py:124 movies/models.py:149
+msgid "row_created"
+msgstr "Запись добавлена"
+
+#: movies/models.py:9
+msgid "row_modified"
+msgstr "Запись обновлена"
+
+#: movies/models.py:27
+msgid "name"
+msgstr "Имя"
+
+#: movies/models.py:28 movies/models.py:173
+msgid "description"
+msgstr "Описание"
+
+#: movies/models.py:32 movies/models.py:122 movies/models.py:128
+msgid "genre_verbose_name"
+msgstr "Жанр"
+
+#: movies/models.py:33 movies/models.py:129
+msgid "genre_verbose_n_pl"
+msgstr "Жанры"
+
+#: movies/models.py:40 movies/models.py:52 movies/models.py:64
+msgid "full_name"
+msgstr "Полное имя"
+
+#: movies/models.py:44 movies/models.py:145 movies/models.py:153
+msgid "person_verbose_name"
+msgstr "Актер"
+
+#: movies/models.py:45 movies/models.py:154
+msgid "person_verbose_n_pl"
+msgstr "Актеры"
+
+#: movies/models.py:56
+msgid "directors_verbose_name"
+msgstr "Режиссер"
+
+#: movies/models.py:57
+msgid "directors_verbose_n_pl"
+msgstr "Режиссеры"
+
+#: movies/models.py:68
+msgid "writers_verbose_name"
+msgstr "Сценарист"
+
+#: movies/models.py:69
+msgid "writers_verbose_n_pl"
+msgstr "Сценаристы"
+
+#: movies/models.py:80 movies/models.py:86
+msgid "writer_verbose_name"
+msgstr "Сценарист"
+
+#: movies/models.py:87
+msgid "writer_verbose_n_pl"
+msgstr "Сценаристы"
+
+#: movies/models.py:101 movies/models.py:107
+msgid "director_verbose_name"
+msgstr "Режиссер"
+
+#: movies/models.py:108
+msgid "director_verbose_n_pl"
+msgstr "Режиссеры"
+
+#: movies/models.py:148
+msgid "role"
+msgstr "Роль"
+
+#: movies/models.py:172
+msgid "title"
+msgstr "Название"
+
+#: movies/models.py:175
+msgid "creation_date"
+msgstr "Дата создания"
+
+#: movies/models.py:180
+msgid "file"
+msgstr "Файл"
+
+#: movies/models.py:186
+msgid "rating"
+msgstr "Рейтинг"
+
+#: movies/models.py:196
+msgid "type"
+msgstr "Тип"
+
+#: movies/models.py:221
+msgid "film_work_verbose_name"
+msgstr "Кинопроизведение"
+
+#: movies/models.py:222
+msgid "film_work_verbose_n_pl"
+msgstr "Кинопроизведения"

@@ -1,0 +1,63 @@
+version: '3.9'
+
+services:
+  postgres:
+    image: postgres:15.1-alpine
+    volumes:
+      - pg_db:/app/db
+    environment:
+      POSTGRES_DB: "${DB_NAME}"
+      POSTGRES_PASSWORD: "${DB_PASSWORD}"
+      POSTGRES_USER: "${DB_USER}"
+
+  backend:
+    build:
+      context: ./app
+    restart: always
+    volumes:
+      - static:/app
+    expose:
+      - 8000
+    env_file:
+      - .env
+    depends_on:
+      - postgres
+
+  nginx:
+    image: nginx:1.19.2
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./configs:/etc/nginx/conf.d:ro
+      - static:/static
+    ports:
+      - "8000:80"
+    depends_on:
+      - backend
+
+  es:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.7.0
+    environment:
+      - discovery.type=single-node
+      - "ES_JAVA_OPTS=-Xms1g -Xmx1g"
+    ports:
+      - "9200:9200"
+    depends_on:
+      - backend
+
+  etl:
+    build:
+      context: ./postgres_to_es/
+    restart: always
+    depends_on:
+      - backend
+      - es
+
+  redis:
+    image: redis:alpine
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+
+volumes:
+  static:
+  pg_db:
